@@ -19,7 +19,7 @@ const Container = styled("div")({
   minHeight: "100vh",
   backgroundImage: "url(/waves.svg)",
   backgroundSize: "cover",
-  backgroundPosition: "center bottom",
+  backgroundPosition: "center bottom 80%",
 });
 
 const ContentWrapper = styled("div")({
@@ -28,7 +28,7 @@ const ContentWrapper = styled("div")({
   alignItems: "center",
   width: "75vw",
   margin: "auto",
-  marginTop:'3%',
+  marginTop:'1%',
   flex: 1,
   padding: "20px",
 });
@@ -36,7 +36,7 @@ const ContentWrapper = styled("div")({
 const Main = styled("main")({
   flex: 1,
   display: "flex",
-  // marginTop:'auto',
+  marginTop:'10%',
   flexDirection: "column",
   gap: "20px",
 });
@@ -44,6 +44,7 @@ const Main = styled("main")({
 const SideBar = styled("aside")({
   width: "200px",
   margin: "3%",
+  marginBottom:'65vh',
   height:'60vh',
   backgroundColor:'#334',
   color:'#fff',
@@ -151,6 +152,25 @@ const AboutMe = () => {
               <Card
                 animate={{ y: [100, 0], opacity: [0, 1] }}
                 transition={{ duration: 1, ease: "easeInOut" }}
+              >
+                <Typography variant="h5">Check Out Disco Stranger!</Typography>
+                <Typography variant="body1">
+                  Find me playing guitar for the psych rock jam band Disco Stranger! We are a four piece band from Oklahoma City, Oklahoma. Check out our music below!
+                </Typography>
+                <iframe
+        style={{ borderRadius: "0px", marginBottom: "10px", marginTop: "15px" }}
+        src="https://open.spotify.com/embed/artist/3SwSE7OtWzLOrc32Eq54gO?utm_source=generator&theme=0"
+        width="98%"
+        height="450"
+        frameBorder="0"
+        allowFullScreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+              </Card>
+              <Card
+                 animate={{ x: [-100, 0], opacity: [0, 1] }}
+                 transition={{ duration: 1, ease: "easeInOut" }}
               >
                 <Typography variant="h5">Collaborate</Typography>
                 <Typography variant="body1">
