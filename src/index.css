@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.home-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* Subtract the height of the navbar */
+  background-image: url("/public/foa.JPG");
+  background-size: cover;
+  background-position: center bottom 75%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about {
+  padding: 0;
+}
+
+.site-name {
+  font-family: "Arial", sans-serif;
+  font-size: 2rem; /* Adjust font size */
+  color: transparent;
+  margin: 0;
+  margin-right: auto; /* Push site name to the far left */
+  background-image: url("/name.svg"); /* Adjust the path to your SVG */
+  background-size: cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeInDown 0.5s ease forwards; /* Apply fade in animation on page load */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  margin: 2%;
+  margin-bottom: auto;
+  margin-top: -0.5rem;
+  flex-wrap: wrap; /* Allow links to wrap to the next line */
+  gap: 10px; /* Add gap between links */
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px; /* Add padding to each link */
+  opacity: 0; /* Initially hide the links */
+  animation: slideInRight 0.5s ease forwards;
+  transition: font-size 0.3s ease;
+}
+
+/* Hover effect */
+.nav-link:hover {
+  font-size: 18px; /* Increase font size on hover */
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ABOUT */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  color: antiquewhite;
+  padding: 20px;
+  align-items: center;
+}
+
+.abt-img {
+  width: 50vw;
+}
+
+.about-content {
+  text-align: center;
+  align-items: center;
+  margin-top: 15vh;
+  color: #fff;
+  width: 55vw;
+  margin-bottom: 40px;
+}
+
+.about-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about-info {
+  display: flex;
+  justify-content: center; /* Adjusted spacing between cards */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gear {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 0px;
+}
+
+.gear-card {
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.gear-card:hover {
+  transform: translateY(-5px);
+}
+
+.gear-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.gear-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gear-card ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.favorite-bands {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.favorite-bands h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.favorite-bands ul {
+  list-style: none;
+  padding: 0;
+}
+
+.favorite-bands ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* HOME FOOTER */
+.footer-container {
+  position: fixed; /* Position the footer */
+  bottom: 0; /* Align the footer to the bottom of the viewport */
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+  z-index: 1; /* Set a higher z-index to ensure it's on top of other content */
+}
+
+.footer-icons {
+  display: flex;
+  padding: 20px;
+  justify-content: flex-end;
+}
+
+.icon {
+  font-size: 30px;
+  color: whitesmoke;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+
+/* Animation on page load */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-icons .icon {
+  animation: fadeInUp 1s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+
+  .abt-img {
+    width: 75vw;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .menu-icon {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .menu-icon__bar {
+    width: 25px;
+
+    height: 3px;
+    background-color: antiquewhite;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-icon__bar.open:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+  }
+
+  .menu-icon__bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-icon__bar.open:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 1%;
+    margin: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+}
