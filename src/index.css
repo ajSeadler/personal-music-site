@@ -51,7 +51,7 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  animation: fadeInDown 0.5s ease forwards; /* Apply fade in animation on page load */
+  animation: fadeInDown 0.5s ease forwards; 
 }
 
 /* Navigation Links */

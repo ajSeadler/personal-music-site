@@ -14,7 +14,7 @@ const Wrapper = styled("div")`
 `;
 
 const Card = styled(motion.div)`
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 10px;
